@@ -1119,3 +1119,9 @@ body {
 .logo-text span {
   color: var(--fiesta-secondary);
 }
+
+.logo-img {
+  height: 48px;     /* Ajusta el tamaño del logo */
+  width: auto;      /* Mantiene proporción */
+  display: block;   /* Quita espacio extraño por línea base */
+}
