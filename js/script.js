@@ -24,7 +24,7 @@
     });
   });
 
-  // venobox popup 
+  // venobox popup
   $('.venobox').venobox();
 
   // dropdown menu
@@ -141,3 +141,87 @@
 
 
 })(jQuery);
+
+
+// ==========================
+// Header & Footer dinámicos
+// ==========================
+
+function getMainHeaderHtml() {
+  return `
+<header class="navigation fixed-top">
+<nav class="navbar navbar-expand-lg navbar-dark">
+  <a class="navbar-brand d-flex align-items-center" href="index.html">
+    <img src="images/logo.png" alt="Fiestas & Dulces" class="logo-img">
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
+    aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse text-center" id="navigation">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="index.html">Inicio</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="serviciosDropdown" role="button" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          Servicios
+        </a>
+        <div class="dropdown-menu" aria-labelledby="serviciosDropdown">
+          <a class="dropdown-item" href="servicio-canto.html">Canto en vivo</a>
+          <a class="dropdown-item" href="servicio-postres.html">Postres y repostería</a>
+          <a class="dropdown-item" href="servicio-mesas-dulces.html">Mesas de dulces</a>
+          <a class="dropdown-item" href="servicio-snacks.html">Mesa de snacks</a>
+          <a class="dropdown-item" href="servicio-pinta-caritas.html">Pinta caritas</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="about.html">Nosotros</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="contact.html">Contacto</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+</header>
+  `;
+}
+
+function getMainFooterHtml() {
+  return `
+<section class="section">
+  <div class="container section-sm overlay-secondary-half bg-cover" data-background="images/backgrounds/cta-bg.jpg" style="background-image: url(&quot;images/backgrounds/cta-bg.jpg&quot;);">
+    <div class="row">
+      <div class="col-lg-8 offset-lg-1">
+        <h2 class="text-gradient-primary">¿Planeamos tu próxima fiesta?</h2>
+        <p class="h4 font-weight-bold text-white mb-4">
+          Escríbeme por WhatsApp al <span class="text-gradient-primary">222 676 3338</span> y armamos tu paquete ideal.
+        </p>
+        <a href="https://wa.me/522226763338" target="_blank" class="btn btn-lg btn-primary">
+          Enviar WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+<footer class="bg-secondary">
+&nbsp;
+</footer>
+  `;
+}
+
+// Insertar header y footer cuando el DOM esté listo
+$(function () {
+  var headerContainer = document.getElementById('site-header');
+  if (headerContainer) {
+    headerContainer.innerHTML = getMainHeaderHtml();
+  }
+
+  var footerContainer = document.getElementById('site-footer');
+  if (footerContainer) {
+    footerContainer.innerHTML = getMainFooterHtml();
+  }
+});

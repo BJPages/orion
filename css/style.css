@@ -1125,3 +1125,65 @@ body {
   width: auto;      /* Mantiene proporción */
   display: block;   /* Quita espacio extraño por línea base */
 }
+
+/* ===========================
+   DESKTOP – Logo grande, fuera de la barra
+   =========================== */
+.logo-img {
+  position: absolute;
+  left: -300px;              /* logo más salido a la izquierda */
+  top: 300%;
+  transform: translateY(-50%);
+  height: 300px;            /* tamaño grande inicial */
+  width: auto;
+  z-index: 10;
+  transition:
+    height 0.3s ease,
+    left 0.3s ease,
+    top 0.3s ease,
+    transform 0.3s ease;
+}
+
+/* El navbar es el “referente” del absolute */
+.navigation .navbar {
+  position: relative;
+}
+
+/* ===========================
+   DESKTOP – Logo cuando haces scroll (.nav-bg)
+   =========================== */
+.navigation.nav-bg .logo-img {
+  height: 80px;             /* tamaño chico */
+  left: -100px;             /* se acerca más a la barra */
+  top: 50%;                 /* sigue centrado verticalmente */
+  transform: translateY(-50%);
+}
+
+/* ===========================
+   MOBILE
+   =========================== */
+@media (max-width: 768px) {
+
+  /* NAVBAR con borde más discreto en móvil */
+  .navigation .navbar {
+    border-radius: 10px;
+  }
+
+  .logo-img {
+    position: relative;     /* que ya no flote en mobile */
+    left: 0;
+    top: 0;
+    transform: none;
+    height: 70px;           /* tamaño base móvil */
+    margin-left: 10px;      /* pequeño margen al logo */
+  }
+
+  /* En móviles el logo NO se mueve/cambia al hacer scroll */
+  .navigation.nav-bg .logo-img {
+    position: relative;
+    left: 0;
+    top: 0;
+    transform: none;
+    height: 70px;           /* mismo tamaño que el estado normal */
+  }
+}
