@@ -11,6 +11,62 @@
   <link rel="stylesheet" href="plugins/venobox/venobox.css">
   <link rel="stylesheet" href="plugins/card-slider/css/style.css">
   <link href="css/style.css" rel="stylesheet">
+
+  <!-- Estilos ligeros para galería / destacados (compatibles con tu template) -->
+  <style>
+    .gallery-card{
+      border-radius: 12px;
+      overflow: hidden;
+      background: #fff;
+      box-shadow: 0 10px 30px rgba(0,0,0,.08);
+      transform: translateY(0);
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+    .gallery-card:hover{
+      transform: translateY(-4px);
+      box-shadow: 0 16px 40px rgba(0,0,0,.12);
+    }
+    .gallery-thumb{
+      position: relative;
+      width: 100%;
+      padding-top: 75%; /* 4:3 */
+      background: #f6f6f6;
+    }
+    .gallery-thumb img{
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .gallery-overlay{
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(0,0,0,.35);
+      opacity: 0;
+      transition: opacity .2s ease;
+    }
+    .gallery-thumb:hover .gallery-overlay{ opacity: 1; }
+    .gallery-icon{
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: rgba(255,255,255,.95);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      color: #000;
+    }
+    .gallery-caption{
+      padding: 12px 14px;
+      border-top: 1px solid rgba(0,0,0,.05);
+    }
+    .gallery-caption small{ opacity: .8; }
+  </style>
 </head>
 
 <body>
@@ -31,6 +87,7 @@
 
 <section class="section">
   <div class="container">
+
     <div class="row mb-5">
       <!-- Text -->
       <div class="col-lg-8">
@@ -54,7 +111,6 @@
           Podemos adaptar colores, sabores y decoración según tu evento. Perfecto para sesiones infantiles,
           fiestas temáticas y celebraciones especiales.
         </p>
-
       </div>
 
       <!-- Sidebar -->
@@ -64,6 +120,193 @@
           <p class="small mb-2">Haz tu pedido con anticipación para asegurar disponibilidad.</p>
           <p class="small mb-2"><strong>WhatsApp:</strong> <br> 222 676 3338</p>
           <a href="https://wa.me/522226763338" class="btn btn-primary btn-block" target="_blank">Enviar Whats</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- DESTACADOS (Random client-side) -->
+    <div class="row align-items-end mb-4">
+      <div class="col-lg-8">
+        <h2 class="section-title mb-0">Destacados</h2>
+        <p class="mb-0">Selección aleatoria (cambia al recargar).</p>
+      </div>
+      <div class="col-lg-4 text-lg-right mt-3 mt-lg-0">
+        <a href="https://wa.me/522226763338" class="btn btn-outline-primary" target="_blank">
+          <i class="ti-comment-alt mr-2"></i> Cotizar por WhatsApp
+        </a>
+      </div>
+    </div>
+
+    <div class="row" id="featured-postres"></div>
+
+    <!-- GALERÍA -->
+    <div class="row align-items-end mb-4 mt-2">
+      <div class="col-lg-8">
+        <h2 class="section-title mb-0">Galería de postres</h2>
+        <p class="mb-0">Da click en cualquier foto para verla en grande.</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <!-- 01 -->
+      <div class="col-12 col-sm-6 col-lg-4 mb-4">
+        <div class="gallery-card">
+          <a class="venobox" data-gall="postres" href="/images/postres/postre_01.jpeg" title="Postre #01">
+            <div class="gallery-thumb">
+              <img src="/images/postres/postre_01.jpeg" alt="Postre 01">
+              <div class="gallery-overlay">
+                <span class="gallery-icon"><i class="ti-zoom-in"></i></span>
+              </div>
+            </div>
+          </a>
+          <div class="gallery-caption">
+            <strong>Postre #01</strong><br>
+            <small>Artesanal • Ideal para eventos</small>
+          </div>
+        </div>
+      </div>
+
+      <!-- 02 -->
+      <div class="col-12 col-sm-6 col-lg-4 mb-4">
+        <div class="gallery-card">
+          <a class="venobox" data-gall="postres" href="/images/postres/postre_02.jpeg" title="Postre #02">
+            <div class="gallery-thumb">
+              <img src="/images/postres/postre_02.jpeg" alt="Postre 02">
+              <div class="gallery-overlay">
+                <span class="gallery-icon"><i class="ti-zoom-in"></i></span>
+              </div>
+            </div>
+          </a>
+          <div class="gallery-caption">
+            <strong>Postre #02</strong><br>
+            <small>Artesanal • Ideal para eventos</small>
+          </div>
+        </div>
+      </div>
+
+      <!-- 03 -->
+      <div class="col-12 col-sm-6 col-lg-4 mb-4">
+        <div class="gallery-card">
+          <a class="venobox" data-gall="postres" href="/images/postres/postre_03.jpeg" title="Postre #03">
+            <div class="gallery-thumb">
+              <img src="/images/postres/postre_03.jpeg" alt="Postre 03">
+              <div class="gallery-overlay">
+                <span class="gallery-icon"><i class="ti-zoom-in"></i></span>
+              </div>
+            </div>
+          </a>
+          <div class="gallery-caption">
+            <strong>Postre #03</strong><br>
+            <small>Artesanal • Ideal para eventos</small>
+          </div>
+        </div>
+      </div>
+
+      <!-- 04 -->
+      <div class="col-12 col-sm-6 col-lg-4 mb-4">
+        <div class="gallery-card">
+          <a class="venobox" data-gall="postres" href="/images/postres/postre_04.jpeg" title="Postre #04">
+            <div class="gallery-thumb">
+              <img src="/images/postres/postre_04.jpeg" alt="Postre 04">
+              <div class="gallery-overlay">
+                <span class="gallery-icon"><i class="ti-zoom-in"></i></span>
+              </div>
+            </div>
+          </a>
+          <div class="gallery-caption">
+            <strong>Postre #04</strong><br>
+            <small>Artesanal • Ideal para eventos</small>
+          </div>
+        </div>
+      </div>
+
+      <!-- 05 -->
+      <div class="col-12 col-sm-6 col-lg-4 mb-4">
+        <div class="gallery-card">
+          <a class="venobox" data-gall="postres" href="/images/postres/postre_05.jpeg" title="Postre #05">
+            <div class="gallery-thumb">
+              <img src="/images/postres/postre_05.jpeg" alt="Postre 05">
+              <div class="gallery-overlay">
+                <span class="gallery-icon"><i class="ti-zoom-in"></i></span>
+              </div>
+            </div>
+          </a>
+          <div class="gallery-caption">
+            <strong>Postre #05</strong><br>
+            <small>Artesanal • Ideal para eventos</small>
+          </div>
+        </div>
+      </div>
+
+      <!-- 06 -->
+      <div class="col-12 col-sm-6 col-lg-4 mb-4">
+        <div class="gallery-card">
+          <a class="venobox" data-gall="postres" href="/images/postres/postre_06.jpeg" title="Postre #06">
+            <div class="gallery-thumb">
+              <img src="/images/postres/postre_06.jpeg" alt="Postre 06">
+              <div class="gallery-overlay">
+                <span class="gallery-icon"><i class="ti-zoom-in"></i></span>
+              </div>
+            </div>
+          </a>
+          <div class="gallery-caption">
+            <strong>Postre #06</strong><br>
+            <small>Artesanal • Ideal para eventos</small>
+          </div>
+        </div>
+      </div>
+
+      <!-- 07 -->
+      <div class="col-12 col-sm-6 col-lg-4 mb-4">
+        <div class="gallery-card">
+          <a class="venobox" data-gall="postres" href="/images/postres/postre_07.jpeg" title="Postre #07">
+            <div class="gallery-thumb">
+              <img src="/images/postres/postre_07.jpeg" alt="Postre 07">
+              <div class="gallery-overlay">
+                <span class="gallery-icon"><i class="ti-zoom-in"></i></span>
+              </div>
+            </div>
+          </a>
+          <div class="gallery-caption">
+            <strong>Postre #07</strong><br>
+            <small>Artesanal • Ideal para eventos</small>
+          </div>
+        </div>
+      </div>
+
+      <!-- 08 -->
+      <div class="col-12 col-sm-6 col-lg-4 mb-4">
+        <div class="gallery-card">
+          <a class="venobox" data-gall="postres" href="/images/postres/postre_08.jpeg" title="Postre #08">
+            <div class="gallery-thumb">
+              <img src="/images/postres/postre_08.jpeg" alt="Postre 08">
+              <div class="gallery-overlay">
+                <span class="gallery-icon"><i class="ti-zoom-in"></i></span>
+              </div>
+            </div>
+          </a>
+          <div class="gallery-caption">
+            <strong>Postre #08</strong><br>
+            <small>Artesanal • Ideal para eventos</small>
+          </div>
+        </div>
+      </div>
+
+      <!-- 09 -->
+      <div class="col-12 col-sm-6 col-lg-4 mb-4">
+        <div class="gallery-card">
+          <a class="venobox" data-gall="postres" href="/images/postres/postre_09.jpeg" title="Postre #09">
+            <div class="gallery-thumb">
+              <img src="/images/postres/postre_09.jpeg" alt="Postre 09">
+              <div class="gallery-overlay">
+                <span class="gallery-icon"><i class="ti-zoom-in"></i></span>
+              </div>
+            </div>
+          </a>
+          <div class="gallery-caption">
+            <strong>Postre #09</strong><br>
+            <small>Artesanal • Ideal para eventos</small>
+          </div>
         </div>
       </div>
 
@@ -81,6 +324,64 @@
 <script src="plugins/counto/counTo.js"></script>
 <script src="plugins/card-slider/js/card-slider-min.js"></script>
 <script src="js/script.js"></script>
+
+<script>
+  // Inicializa Venobox (lightbox) para lo que ya exista en el DOM
+  $(document).ready(function(){
+    $('.venobox').venobox({
+      spinner: 'wave',
+      numeratio: true,
+      infinigall: true
+    });
+  });
+
+  // Destacados random (client-side) - cambia al recargar
+  (function () {
+    const base = "/images/postres/";
+    const files = Array.from({ length: 9 }, (_, i) => {
+      const n = String(i + 1).padStart(2, "0");
+      return `postre_${n}.jpeg`;
+    });
+
+    // Shuffle Fisher–Yates
+    for (let i = files.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [files[i], files[j]] = [files[j], files[i]];
+    }
+
+    const pick = files.slice(0, 3); // elige 3
+    const wrap = document.getElementById("featured-postres");
+    if (!wrap) return;
+
+    wrap.innerHTML = pick.map((f, idx) => `
+      <div class="col-12 col-md-4 mb-4">
+        <div class="gallery-card">
+          <a class="venobox" data-gall="destacados" href="${base + f}" title="Destacado #${idx + 1}">
+            <div class="gallery-thumb">
+              <img src="${base + f}" alt="Postre destacado ${idx + 1}">
+              <div class="gallery-overlay">
+                <span class="gallery-icon"><i class="ti-zoom-in"></i></span>
+              </div>
+            </div>
+          </a>
+          <div class="gallery-caption">
+            <strong>Destacado #${idx + 1}</strong><br>
+            <small>Recomendado para tu evento</small>
+          </div>
+        </div>
+      </div>
+    `).join("");
+
+    // Re-inicializa Venobox para los nuevos anchors agregados por JS
+    if (window.jQuery && jQuery.fn.venobox) {
+      jQuery('.venobox').venobox({
+        spinner: 'wave',
+        numeratio: true,
+        infinigall: true
+      });
+    }
+  })();
+</script>
 
 </body>
 </html>
