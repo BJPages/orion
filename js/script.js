@@ -172,7 +172,7 @@ function getMainHeaderHtml() {
         <div class="dropdown-menu" aria-labelledby="serviciosDropdown">
           <a class="dropdown-item" href="servicio-canto.html">Canto en vivo</a>
           <a class="dropdown-item" href="servicio-postres.html">Postres y repostería</a>
-          <a class="dropdown-item" href="servicio-postres.html">Backdrops y mesas</a>
+          <a class="dropdown-item" href="servicio-adorno.html">Backdrops y mesas</a>
           <a class="dropdown-item" href="servicio-mesas-dulces.html">Mesas de dulces</a>
           <a class="dropdown-item" href="servicio-snacks.html">Mesa de snacks</a>
           <a class="dropdown-item" href="servicio-pinta-caritas.html">Pinta caritas</a>
