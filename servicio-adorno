@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="utf-8">
-  <title>Arreglos de Mesa | Fiestas & Dulces</title>
+  <title>Arreglos de mesa y backdrops | Fiestas & Dulces</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
@@ -79,7 +79,7 @@
   <div class="container">
     <div class="row">
       <div class="col-12 text-center">
-        <h1 class="display-1 text-white font-weight-bold">Arreglos de mesa</h1>
+        <h1 class="display-1 text-white font-weight-bold">Arreglos de mesa y backdrops</h1>
       </div>
     </div>
   </div>
@@ -91,24 +91,24 @@
     <div class="row mb-5">
       <!-- Text -->
       <div class="col-lg-8">
-        <h2 class="section-title">Detalles que transforman tu celebración</h2>
+        <h2 class="section-title">Una escena bonita hace toda la diferencia</h2>
         <p class="lead">
-          Creamos arreglos y decoraciones para que tu mesa principal y tu evento se vean súper especiales,
-          con estilo, buen gusto y a la medida de tu temática.
+          Creamos backdrops y arreglos para mesa principal que se ven increíbles en fotos y levantan la vibra del evento.
+          Diseños a tu temática, con detalles que se notan y se recuerdan.
         </p>
 
         <h4 class="mt-4">Opciones disponibles</h4>
         <ul class="list-unstyled">
-          <li>• Retablos / fondos decorativos para mesa principal.</li>
-          <li>• Adornos para mesa principal (detalles y montaje).</li>
-          <li>• Centros de mesa (florales o temáticos).</li>
-          <li>• Decoración por detalle en sillas, paredes y rincones (sin montaje completo de salón).</li>
-          <li>• Complementos: letreros, bases, marcos, tonos y accesorios según tu temática.</li>
+          <li>• Backdrops (fondos) portátiles con estructura metálica: listos para colocar donde tú quieras.</li>
+          <li>• Montaje y decoración para mesa principal (fondo + detalles).</li>
+          <li>• Centros de mesa (florales o temáticos) para dar coherencia a toda la decoración.</li>
+          <li>• Detalles decorativos en sillas, paredes y rincones (acentos y complementos).</li>
+          <li>• Complementos: letreros, bases, marcos, colores y accesorios según tu temática.</li>
         </ul>
 
         <h4 class="mt-4">Personalización</h4>
         <p>
-          Diseñamos la propuesta con tus colores, temática y presupuesto. Ideal para cumpleaños, bautizos,
+          Armamos la propuesta con tus colores, temática y presupuesto. Ideal para cumpleaños, bautizos,
           primeras comuniones y eventos privados.
         </p>
 
@@ -125,6 +125,14 @@
           <p class="small mb-2">Agenda con anticipación para asegurar fecha y materiales.</p>
           <p class="small mb-2"><strong>WhatsApp:</strong> <br> 222 676 3338</p>
           <a href="https://wa.me/522226763338" class="btn btn-primary btn-block" target="_blank">Enviar Whats</a>
+        </div>
+
+        <!-- 3 pasos (ligero, comercial) -->
+        <div class="card shadow p-4 mt-4">
+          <h5 class="mb-3">Para cotizar rápidamente</h5>
+          <p class="small mb-2">1) Fecha y tipo de evento</p>
+          <p class="small mb-2">2) Temática / colores</p>
+          <p class="small mb-0">3) ¿Mesa principal, centros o ambos?</p>
         </div>
       </div>
     </div>
@@ -146,7 +154,7 @@
       <!-- 01 -->
       <div class="col-12 col-sm-6 col-lg-4 mb-4">
         <div class="gallery-card">
-          <a class="venobox" data-gall="arreglos" href="images/arreglo/arreglo_01.jpeg" title="Montaje de mesa principal">
+          <a class="venobox" data-gall="arreglos" href="images/arreglo/arreglo_01.jpeg" title="Backdrop + mesa principal">
             <div class="gallery-thumb">
               <img src="images/arreglo/arreglo_01.jpeg" alt="Arreglo 01">
               <div class="gallery-overlay">
@@ -155,8 +163,8 @@
             </div>
           </a>
           <div class="gallery-caption">
-            <strong>Mesa principal</strong><br>
-            <small>Un fondo que se roba las fotos</small>
+            <strong>Backdrop + mesa principal</strong><br>
+            <small>Tu punto focal para fotos</small>
           </div>
         </div>
       </div>
@@ -164,7 +172,7 @@
       <!-- 02 -->
       <div class="col-12 col-sm-6 col-lg-4 mb-4">
         <div class="gallery-card">
-          <a class="venobox" data-gall="arreglos" href="images/arreglo/arreglo_02.jpeg" title="Retablo / fondo decorativo">
+          <a class="venobox" data-gall="arreglos" href="images/arreglo/arreglo_02.jpeg" title="Fondo decorativo portátil">
             <div class="gallery-thumb">
               <img src="images/arreglo/arreglo_02.jpeg" alt="Arreglo 02">
               <div class="gallery-overlay">
@@ -173,8 +181,8 @@
             </div>
           </a>
           <div class="gallery-caption">
-            <strong>Retablo decorativo</strong><br>
-            <small>Temática y colores a tu estilo</small>
+            <strong>Fondo decorativo</strong><br>
+            <small>Se adapta a tu espacio</small>
           </div>
         </div>
       </div>
@@ -182,7 +190,7 @@
       <!-- 03 -->
       <div class="col-12 col-sm-6 col-lg-4 mb-4">
         <div class="gallery-card">
-          <a class="venobox" data-gall="arreglos" href="images/arreglo/arreglo_03.jpeg" title="Centro de mesa">
+          <a class="venobox" data-gall="arreglos" href="images/arreglo/arreglo_03.jpeg" title="Centro de mesa floral">
             <div class="gallery-thumb">
               <img src="images/arreglo/arreglo_03.jpeg" alt="Arreglo 03">
               <div class="gallery-overlay">
@@ -192,7 +200,7 @@
           </a>
           <div class="gallery-caption">
             <strong>Centro de mesa</strong><br>
-            <small>Elegante, delicado y muy fotogénico</small>
+            <small>Elegancia en cada mesa</small>
           </div>
         </div>
       </div>
@@ -208,6 +216,7 @@
 <script src="plugins/slick/slick.min.js"></script>
 <script src="plugins/venobox/venobox.min.js"></script>
 <script src="plugins/counto/apear.js"></script>
+<script src="plugins/counto/counTo.js"></script>
 <script src="plugins/counto/counTo.js"></script>
 <script src="plugins/card-slider/js/card-slider-min.js"></script>
 <script src="js/script.js"></script>
