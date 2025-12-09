@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="utf-8">
-  <title>Pinta Caritas | Fiestas & Dulces</title>
+  <title>Pinta Caritas | Cosmos Arte y Sabor</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
@@ -11,6 +11,61 @@
   <link rel="stylesheet" href="plugins/venobox/venobox.css">
   <link rel="stylesheet" href="plugins/card-slider/css/style.css">
   <link href="css/style.css" rel="stylesheet">
+
+  <style>
+    /* Badges + galería consistente con el resto del sitio */
+    .pill{
+      display:inline-block;padding:6px 10px;border-radius:999px;
+      background:rgba(0,0,0,.06);font-size:12px;margin-right:8px;margin-bottom:8px;
+    }
+    .gallery-card{
+      border-radius: 12px;
+      overflow: hidden;
+      background: #fff;
+      box-shadow: 0 10px 30px rgba(0,0,0,.08);
+      transform: translateY(0);
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+    .gallery-card:hover{
+      transform: translateY(-4px);
+      box-shadow: 0 16px 40px rgba(0,0,0,.12);
+    }
+    .gallery-thumb{
+      position: relative;
+      width: 100%;
+      padding-top: 70%;
+      background: #f6f6f6;
+    }
+    .gallery-thumb img{
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .gallery-overlay{
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(0,0,0,.35);
+      opacity: 0;
+      transition: opacity .2s ease;
+    }
+    .gallery-thumb:hover .gallery-overlay{ opacity: 1; }
+    .gallery-icon{
+      width: 48px;height: 48px;border-radius: 999px;
+      background: rgba(255,255,255,.95);
+      display: inline-flex;align-items: center;justify-content: center;
+      font-size: 18px;color: #000;
+    }
+    .gallery-caption{
+      padding: 12px 14px;
+      border-top: 1px solid rgba(0,0,0,.05);
+    }
+    .gallery-caption small{ opacity: .8; }
+  </style>
 </head>
 
 <body>
@@ -18,51 +73,211 @@
 <div id="site-header"></div>
 
 <section class="page-title bg-cover" data-background="images/backgrounds/page-title.jpg">
-  <div class="container"><div class="row"><div class="col-12 text-center">
-    <h1 class="display-1 text-white font-weight-bold">Pinta Caritas</h1>
-  </div></div></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center">
+        <h1 class="display-1 text-white font-weight-bold">Pinta Caritas</h1>
+      </div>
+    </div>
+  </div>
 </section>
 
 <section class="section">
   <div class="container">
-    <div class="row mb-5">
 
+    <div class="row mb-5">
       <div class="col-lg-8">
-        <h2 class="section-title">Diversión y color para los más pequeños</h2>
+        <h2 class="section-title">Caritas felices, fotos increíbles</h2>
+
+        <div class="mb-3">
+          <span class="pill">🎨 Pintura para piel</span>
+          <span class="pill">⚡ Diseños rápidos</span>
+          <span class="pill">✨ Detalles y brillo</span>
+          <span class="pill">🧼 Área limpia</span>
+        </div>
+
         <p class="lead">
-          La actividad favorita en todas las fiestas infantiles. Diseños seguros, coloridos
-          y rápidos para que todos los niños puedan participar.
+          Pinta caritas es de esas actividades que siempre levantan la fiesta: los peques eligen su diseño,
+          se emocionan, y de paso te quedan fotos buenísimas. Manejamos estilos desde detalles sencillos
+          hasta máscaras más llamativas, según el ritmo del evento.
         </p>
 
-        <h4 class="mt-4">Incluye</h4>
+        <p>
+          Trabajamos con materiales pensados para la piel y cuidamos que el área se mantenga ordenada.
+          La idea es que sea una experiencia divertida, rápida y con resultados bonitos.
+        </p>
+
+        <h4 class="mt-4">¿Qué incluye?</h4>
         <ul class="list-unstyled">
-          <li>• Pintura dermatológica especial para niños.</li>
-          <li>• Diseños rápidos (3–5 minutos cada uno).</li>
-          <li>• Plantillas de figuras clásicas y personalizadas.</li>
-          <li>• Area limpia, organizada y segura.</li>
+          <li>• Pintura especial para piel (pensada para uso en niños).</li>
+          <li>• Diseños rápidos para que puedan participar varios peques.</li>
+          <li>• Opciones de estilo: detalle pequeño, media carita o tipo máscara.</li>
+          <li>• Área limpia, organizada y lista para trabajar.</li>
         </ul>
 
-        <h4 class="mt-4">Temáticas populares</h4>
+        <h4 class="mt-4">Estilos populares</h4>
         <ul class="list-unstyled">
-          <li>• Súper héroes.</li>
-          <li>• Princesas.</li>
-          <li>• Animales.</li>
-          <li>• Flores y glitter.</li>
-          <li>• Diseños personalizados según tu fiesta.</li>
+          <li>• Héroes y personajes.</li>
+          <li>• Flores, mariposas y arcoíris.</li>
+          <li>• Unicornios y fantasía.</li>
+          <li>• Diseños “mini” para fila rápida.</li>
+          <li>• Diseños más pro para momentos especiales.</li>
         </ul>
-
       </div>
 
+      <!-- Columna derecha SIN Whats/CTA (ya está en el footer) -->
       <div class="col-lg-4">
         <div class="card shadow p-4">
-          <h4 class="mb-3">Reservaciones</h4>
-          <p class="small mb-2">Agenda con tiempo para asegurar disponibilidad.</p>
-          <p class="small mb-2"><strong>WhatsApp:</strong> 222 676 3338</p>
-          <a href="https://wa.me/522226763338" class="btn btn-primary btn-block" target="_blank">Enviar Whats</a>
+          <h4 class="mb-3">Para que fluya mejor</h4>
+          <p class="small mb-3">
+            Para que rinda y se mantenga ordenado, suele ayudar:
+          </p>
+          <ul class="list-unstyled small mb-0">
+            <li class="mb-2">• Tener una silla y buena luz cerca.</li>
+            <li class="mb-2">• Definir si prefieres más “mini diseños” o “máscaras completas”.</li>
+            <li class="mb-2">• Si hay muchos niños, podemos priorizar opciones rápidas.</li>
+            <li class="mb-0">• Si tu fiesta tiene temática, adaptamos estilos y colores.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- GALERÍA -->
+    <div class="row align-items-end mb-4">
+      <div class="col-lg-8">
+        <h2 class="section-title mb-0">Galería</h2>
+        <p class="mb-0">Da click en cualquier foto para verla en grande.</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <!-- 01 -->
+      <div class="col-12 col-md-6 col-lg-3 mb-4">
+        <div class="gallery-card">
+          <a class="venobox" data-gall="pinta" href="images/pinta/Caritas_01.jpg" title="Detalle divertido">
+            <div class="gallery-thumb">
+              <img src="images/pinta/Caritas_01.jpg" alt="Pinta Caritas 01">
+              <div class="gallery-overlay">
+                <span class="gallery-icon"><i class="ti-zoom-in"></i></span>
+              </div>
+            </div>
+          </a>
+          <div class="gallery-caption">
+            <strong>Mini diseño</strong><br>
+            <small>Rápido y favorito de todos</small>
+          </div>
         </div>
       </div>
 
+      <!-- 02 -->
+      <div class="col-12 col-md-6 col-lg-3 mb-4">
+        <div class="gallery-card">
+          <a class="venobox" data-gall="pinta" href="images/pinta/Caritas_02.jpg" title="Estilo héroe">
+            <div class="gallery-thumb">
+              <img src="images/pinta/Caritas_02.jpg" alt="Pinta Caritas 02">
+              <div class="gallery-overlay">
+                <span class="gallery-icon"><i class="ti-zoom-in"></i></span>
+              </div>
+            </div>
+          </a>
+          <div class="gallery-caption">
+            <strong>Estilo héroe</strong><br>
+            <small>Impacto sin tardar</small>
+          </div>
+        </div>
+      </div>
+
+      <!-- 03 -->
+      <div class="col-12 col-md-6 col-lg-3 mb-4">
+        <div class="gallery-card">
+          <a class="venobox" data-gall="pinta" href="images/pinta/Caritas_03.jpg" title="Diseños para niñas">
+            <div class="gallery-thumb">
+              <img src="images/pinta/Caritas_03.jpg" alt="Pinta Caritas 03">
+              <div class="gallery-overlay">
+                <span class="gallery-icon"><i class="ti-zoom-in"></i></span>
+              </div>
+            </div>
+          </a>
+          <div class="gallery-caption">
+            <strong>Flores & fantasía</strong><br>
+            <small>Colores que se ven hermosos</small>
+          </div>
+        </div>
+      </div>
+
+      <!-- 04 -->
+      <div class="col-12 col-md-6 col-lg-3 mb-4">
+        <div class="gallery-card">
+          <a class="venobox" data-gall="pinta" href="images/pinta/Caritas_04.jpg" title="Media máscara">
+            <div class="gallery-thumb">
+              <img src="images/pinta/Caritas_04.jpg" alt="Pinta Caritas 04">
+              <div class="gallery-overlay">
+                <span class="gallery-icon"><i class="ti-zoom-in"></i></span>
+              </div>
+            </div>
+          </a>
+          <div class="gallery-caption">
+            <strong>Media máscara</strong><br>
+            <small>Más pro, mismo ritmo</small>
+          </div>
+        </div>
+      </div>
+
+      <!-- 05 -->
+      <div class="col-12 col-md-6 col-lg-4 mb-4">
+        <div class="gallery-card">
+          <a class="venobox" data-gall="pinta" href="images/pinta/Caritas_05.jpg" title="Opciones de súper héroes">
+            <div class="gallery-thumb">
+              <img src="images/pinta/Caritas_05.jpg" alt="Pinta Caritas 05">
+              <div class="gallery-overlay">
+                <span class="gallery-icon"><i class="ti-zoom-in"></i></span>
+              </div>
+            </div>
+          </a>
+          <div class="gallery-caption">
+            <strong>Héroes favoritos</strong><br>
+            <small>Los más pedidos en fiesta</small>
+          </div>
+        </div>
+      </div>
+
+      <!-- 06 -->
+      <div class="col-12 col-md-6 col-lg-4 mb-4">
+        <div class="gallery-card">
+          <a class="venobox" data-gall="pinta" href="images/pinta/Caritas_06.jpg" title="Diseño tipo máscara">
+            <div class="gallery-thumb">
+              <img src="images/pinta/Caritas_06.jpg" alt="Pinta Caritas 06">
+              <div class="gallery-overlay">
+                <span class="gallery-icon"><i class="ti-zoom-in"></i></span>
+              </div>
+            </div>
+          </a>
+          <div class="gallery-caption">
+            <strong>Máscara de color</strong><br>
+            <small>Perfecta para fotos</small>
+          </div>
+        </div>
+      </div>
+
+      <!-- 07 -->
+      <div class="col-12 col-md-6 col-lg-4 mb-4">
+        <div class="gallery-card">
+          <a class="venobox" data-gall="pinta" href="images/pinta/Caritas_07.jpg" title="Diseño mágico">
+            <div class="gallery-thumb">
+              <img src="images/pinta/Caritas_07.jpg" alt="Pinta Caritas 07">
+              <div class="gallery-overlay">
+                <span class="gallery-icon"><i class="ti-zoom-in"></i></span>
+              </div>
+            </div>
+          </a>
+          <div class="gallery-caption">
+            <strong>Unicornio</strong><br>
+            <small>El más mágico del día</small>
+          </div>
+        </div>
+      </div>
     </div>
+
   </div>
 </section>
 
@@ -76,6 +291,18 @@
 <script src="plugins/counto/counTo.js"></script>
 <script src="plugins/card-slider/js/card-slider-min.js"></script>
 <script src="js/script.js"></script>
+
+<script>
+  $(document).ready(function(){
+    if (window.jQuery && jQuery.fn.venobox) {
+      $('.venobox').venobox({
+        spinner: 'wave',
+        numeratio: true,
+        infinigall: true
+      });
+    }
+  });
+</script>
 
 </body>
 </html>
